@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meals &amp; More Support | CACFP Sponsor Texas</title>
+  <meta name="description" content="Meals and More Support is a licensed CACFP food program sponsor in Texas. We help licensed child care centers earn monthly meal reimbursements." />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <style>
+    :root,[data-theme="light"]{
+      --bg:#f9f8f4;--surface:#fff;--surface2:#f4f7f4;--surface-off:#eef4ee;
+      --divider:#dde8dd;--border:#ccdacc;
+      --text:#1a2e1a;--text-muted:#4a6349;--text-faint:#8aaa89;--text-inv:#f9f8f4;
+      --primary:#1e6b3a;--primary-h:#155129;--primary-l:#e8f4ec;
+      --gold:#e09000;--gold-h:#c07a00;--gold-l:#fff8e6;--accent:#f4a900;
+      --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-2xl:1.5rem;--r-full:9999px;
+      --sh-sm:0 1px 3px rgba(20,60,20,.08);--sh-md:0 4px 16px rgba(20,60,20,.10);--sh-lg:0 12px 40px rgba(20,60,20,.14);
+      --fd:'Nunito','Segoe UI',sans-serif;--fb:'Source Sans 3','Segoe UI',sans-serif;
+      --tx-xs:clamp(.75rem,.7rem + .25vw,.875rem);--tx-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --tx-base:clamp(1rem,.95rem + .25vw,1.125rem);--tx-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --tx-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--tx-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+      --tx-3xl:clamp(2.5rem,1rem + 4vw,5rem);
+      --sp1:.25rem;--sp2:.5rem;--sp3:.75rem;--sp4:1rem;--sp5:1.25rem;--sp6:1.5rem;
+      --sp8:2rem;--sp10:2.5rem;--sp12:3rem;--sp16:4rem;--sp20:5rem;--sp24:6rem;
+      --cw:1200px;--cd:960px;--cn:640px;--tr:200ms cubic-bezier(.16,1,.3,1);
+    }
+    [data-theme="dark"]{
+      --bg:#111c11;--surface:#162016;--surface2:#1c2a1c;--surface-off:#1f2f1f;
+      --divider:#2a3d2a;--border:#324832;
+      --text:#dceadc;--text-muted:#8aaa89;--text-faint:#4d6e4d;--text-inv:#111c11;
+      --primary:#5abf7a;--primary-h:#3da862;--primary-l:#1a3520;
+      --gold:#f4b83a;--gold-h:#d99f20;--gold-l:#2a2010;--accent:#f4b83a;
+      --sh-sm:0 1px 3px rgba(0,0,0,.3);--sh-md:0 4px 16px rgba(0,0,0,.4);--sh-lg:0 12px 40px rgba(0,0,0,.5);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--fb);font-size:var(--tx-base);color:var(--text);background:var(--bg);line-height:1.65;min-height:100dvh}
+    img,picture{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
+    h1,h2,h3,h4{font-family:var(--fd);text-wrap:balance;line-height:1.15}
+    p,li{text-wrap:pretty;max-width:72ch}
+    :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:var(--r-sm)}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+    .container{max-width:var(--cw);margin-inline:auto;padding-inline:var(--sp6)}
+    .container--d{max-width:var(--cd);margin-inline:auto;padding-inline:var(--sp6)}
+    .container--n{max-width:var(--cn);margin-inline:auto;padding-inline:var(--sp6)}
+    .section{padding-block:clamp(var(--sp12),7vw,var(--sp24))}
+    .slabel{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--primary);margin-bottom:var(--sp3);display:block}
+    .stitle{font-size:var(--tx-2xl);font-weight:800;color:var(--text);margin-bottom:var(--sp5)}
+    .ssub{font-size:var(--tx-lg);color:var(--text-muted);max-width:60ch;line-height:1.6}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .btn{display:inline-flex;align-items:center;gap:var(--sp2);padding:var(--sp3) var(--sp6);border-radius:var(--r-full);font-size:var(--tx-sm);font-weight:700;font-family:var(--fd);transition:all var(--tr);text-decoration:none;white-space:nowrap;min-height:44px}
+    .btn-p{background:var(--primary);color:var(--text-inv)}
+    .btn-p:hover{background:var(--primary-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+    .btn-g{background:var(--accent);color:#1a1a00}
+    .btn-g:hover{background:var(--gold-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+    .btn-o{border:2px solid var(--primary);color:var(--primary);background:transparent}
+    .btn-o:hover{background:var(--primary-l)}
+    .skip-link{position:fixed;top:var(--sp4);left:var(--sp4);background:var(--primary);color:var(--text-inv);padding:var(--sp2) var(--sp4);border-radius:var(--r-md);z-index:9999;transform:translateY(-150%);transition:transform var(--tr)}
+    .skip-link:focus{transform:translateY(0)}
+    #cookie{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:var(--sp4) var(--sp6);z-index:9000;display:flex;align-items:center;gap:var(--sp4);flex-wrap:wrap;box-shadow:var(--sh-lg)}
+    #cookie p{font-size:var(--tx-sm);color:var(--text-muted);max-width:70ch;flex:1}
+    #cookie a{color:var(--primary);text-decoration:underline}
+    .ca{display:flex;gap:var(--sp3)}
+    .cacc{background:var(--primary);color:#fff;border-radius:var(--r-full);padding:var(--sp2) var(--sp5);font-size:var(--tx-sm);font-weight:600;cursor:pointer;border:none}
+    .cdec{color:var(--text-muted);font-size:var(--tx-sm);cursor:pointer;background:none;border:none}
+    nav.topnav{position:sticky;top:0;z-index:1000;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--sh-sm)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;padding-block:var(--sp3);gap:var(--sp4)}
+    .nav-logo{display:flex;align-items:center;gap:var(--sp3);text-decoration:none;flex-shrink:0}
+    .nav-logo img{height:52px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:var(--sp1)}
+    .nav-link{font-size:var(--tx-sm);font-weight:600;color:var(--text-muted);padding:var(--sp2) var(--sp3);border-radius:var(--r-md);transition:all var(--tr)}
+    .nav-link:hover{color:var(--primary);background:var(--primary-l)}
+    .nav-act{display:flex;align-items:center;gap:var(--sp3)}
+    .tgl{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-full);color:var(--text-muted);transition:all var(--tr)}
+    .tgl:hover{background:var(--surface-off);color:var(--text)}
+    .ltgl{font-size:var(--tx-xs);font-weight:700;background:var(--primary-l);color:var(--primary);border-radius:var(--r-full);padding:var(--sp1) var(--sp3);border:1px solid var(--primary);transition:all var(--tr)}
+    .ltgl:hover{background:var(--primary);color:#fff}
+    .ham{display:none;flex-direction:column;gap:5px;padding:var(--sp2)}
+    .ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--tr)}
+    .mmenu{display:none;flex-direction:column;background:var(--surface);border-top:1px solid var(--border);padding:var(--sp4) var(--sp6);gap:var(--sp2)}
+    .mmenu.open{display:flex}
+    .mmenu .nav-link{padding:var(--sp3) var(--sp4);border-radius:var(--r-md)}
+    .mmenu .btn{width:100%;justify-content:center;margin-top:var(--sp2)}
+    @media(max-width:768px){.nav-links{display:none}.nav-act .btn{display:none}.ham{display:flex}}
+    .hero{position:relative;background:var(--primary);overflow:hidden;min-height:85vh;display:flex;align-items:center}
+    .hbg{position:absolute;inset:0;background-image:url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/d49a6787-88f2-4d65-9f50-a9bd113f538c.png');background-size:cover;background-position:center 30%;opacity:.22}
+    .hov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,58,28,.92) 0%,rgba(14,58,28,.7) 60%,rgba(30,107,58,.5) 100%)}
+    .hcon{position:relative;z-index:2;max-width:var(--cw);margin-inline:auto;padding:var(--sp20) var(--sp6) var(--sp16);display:grid;grid-template-columns:1fr 1fr;gap:var(--sp12);align-items:center}
+    .hey{display:inline-flex;align-items:center;gap:var(--sp2);background:rgba(244,169,0,.2);border:1px solid rgba(244,169,0,.4);color:var(--accent);font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:var(--sp2) var(--sp4);border-radius:var(--r-full);margin-bottom:var(--sp5)}
+    .htitle{font-size:var(--tx-3xl);font-weight:800;color:#fff;line-height:1.1;margin-bottom:var(--sp5)}
+    .htitle .hl{color:var(--accent)}
+    .hsub{font-size:var(--tx-lg);color:rgba(255,255,255,.85);max-width:52ch;line-height:1.6;margin-bottom:var(--sp8)}
+    .hctas{display:flex;gap:var(--sp4);flex-wrap:wrap}
+    .hcard{background:rgba(255,255,255,.10);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-2xl);padding:var(--sp8);color:#fff}
+    .hcard-t{font-size:var(--tx-lg);font-weight:700;margin-bottom:var(--sp6);color:var(--accent)}
+    .hsg{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp4)}
+    .hstat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:var(--sp4);text-align:center}
+    .hsn{font-size:var(--tx-xl);font-weight:800;color:var(--accent);display:block}
+    .hsl{font-size:var(--tx-xs);color:rgba(255,255,255,.7);margin-top:var(--sp1)}
+    .hcc{margin-top:var(--sp5);padding-top:var(--sp5);border-top:1px solid rgba(255,255,255,.15)}
+    .hcc p{font-size:var(--tx-sm);color:rgba(255,255,255,.7);margin-bottom:var(--sp3);max-width:none}
+    @media(max-width:900px){.hcon{grid-template-columns:1fr}.hcard{display:none}}
+    @media(max-width:600px){.htitle{font-size:var(--tx-2xl)}.hctas{flex-direction:column}.hctas .btn{justify-content:center}}
+    .trust{background:var(--surface2);border-bottom:1px solid var(--border);padding-block:var(--sp5)}
+    .trust-in{display:flex;align-items:center;justify-content:center;gap:var(--sp8);flex-wrap:wrap}
+    .titem{display:flex;align-items:center;gap:var(--sp3);font-size:var(--tx-sm);font-weight:600;color:var(--text-muted)}
+    .titem i{color:var(--primary)}
+    .tdiv{width:1px;height:24px;background:var(--border)}
+    @media(max-width:600px){.tdiv{display:none}}
+    .cacfp-sec{background:var(--surface)}
+    .cacfp-g{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp12);align-items:center}
+    .cacfp-img{border-radius:var(--r-2xl);overflow:hidden;box-shadow:var(--sh-lg)}
+    .cacfp-img img{width:100%;height:380px;object-fit:cover}
+    .ctag{display:inline-block;background:var(--primary-l);color:var(--primary);font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:var(--sp1) var(--sp3);border-radius:var(--r-full);margin-bottom:var(--sp4)}
+    .ccl{margin-top:var(--sp6);display:flex;flex-direction:column;gap:var(--sp3)}
+    .cck{display:flex;align-items:flex-start;gap:var(--sp3);font-size:var(--tx-base)}
+    .cck i{color:var(--primary);flex-shrink:0;margin-top:2px}
+    @media(max-width:768px){.cacfp-g{grid-template-columns:1fr}.cacfp-img img{height:260px}}
+    .pill-sec{background:var(--bg)}
+    .pill-hd{text-align:center;margin-bottom:var(--sp12)}
+    .pill-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--sp6)}
+    .pill-c{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp8);transition:all var(--tr)}
+    .pill-c:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+    .pill-ic{width:52px;height:52px;background:var(--primary-l);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp5);color:var(--primary)}
+    .pill-t{font-size:var(--tx-lg);font-weight:800;margin-bottom:var(--sp3)}
+    .pill-d{font-size:var(--tx-base);color:var(--text-muted);line-height:1.6;max-width:none}
+    .steps-sec{background:var(--primary);color:#fff}
+    .steps-hd{text-align:center;margin-bottom:var(--sp12)}
+    .steps-hd .slabel{color:var(--accent)}
+    .steps-hd .stitle{color:#fff}
+    .steps-hd .ssub{color:rgba(255,255,255,.75)}
+    .steps-g{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp6)}
+    .step-c{text-align:center;padding:var(--sp6);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);transition:all var(--tr)}
+    .step-c:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+    .step-n{width:52px;height:52px;background:var(--accent);color:#1a1a00;font-size:var(--tx-lg);font-weight:800;border-radius:var(--r-full);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp5);font-family:var(--fd)}
+    .step-t{font-size:var(--tx-base);font-weight:700;color:#fff;margin-bottom:var(--sp3)}
+    .step-d{font-size:var(--tx-sm);color:rgba(255,255,255,.75);max-width:none;line-height:1.6}
+    @media(max-width:900px){.steps-g{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.steps-g{grid-template-columns:1fr}}
+    .est-sec{background:var(--surface)}
+    .est-w{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp12);align-items:start}
+    .est-why{display:flex;flex-direction:column;gap:var(--sp4);margin-top:var(--sp6)}
+    .est-wi{display:flex;align-items:flex-start;gap:var(--sp3);font-size:var(--tx-base);color:var(--text-muted)}
+    .est-wi i{color:var(--primary);flex-shrink:0;margin-top:3px}
+    .est-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-2xl);padding:var(--sp8);box-shadow:var(--sh-sm)}
+    .est-tit{font-size:var(--tx-lg);font-weight:800;margin-bottom:var(--sp6);color:var(--text)}
+    .fg{margin-bottom:var(--sp5)}
+    .fl{display:block;font-size:var(--tx-sm);font-weight:600;margin-bottom:var(--sp2);color:var(--text)}
+    .fc{width:100%;padding:var(--sp3) var(--sp4);border:1.5px solid var(--border);border-radius:var(--r-md);font:inherit;font-size:var(--tx-base);background:var(--surface);color:var(--text);transition:border-color var(--tr);min-height:44px}
+    .fc:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,107,58,.12)}
+    .fh{font-size:var(--tx-xs);color:var(--text-faint);margin-top:var(--sp1)}
+    .egate{margin-top:var(--sp6);padding-top:var(--sp6);border-top:1px solid var(--border)}
+    .egate p{font-size:var(--tx-sm);color:var(--text-muted);margin-bottom:var(--sp4);max-width:none}
+    .eres{display:none;background:var(--primary-l);border:2px solid var(--primary);border-radius:var(--r-xl);padding:var(--sp6);text-align:center;margin-top:var(--sp5)}
+    .eres.show{display:block}
+    .eamt{font-size:var(--tx-2xl);font-weight:800;color:var(--primary);font-family:var(--fd)}
+    .elbl{font-size:var(--tx-sm);color:var(--text-muted);margin-top:var(--sp2)}
+    .edis{font-size:var(--tx-xs);color:var(--text-faint);margin-top:var(--sp4);max-width:none}
+    @media(max-width:768px){.est-w{grid-template-columns:1fr}}
+    .about-sec{background:var(--bg)}
+    .about-g{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp12);align-items:center}
+    .about-img{border-radius:var(--r-2xl);overflow:hidden;box-shadow:var(--sh-lg)}
+    .about-img img{width:100%;height:420px;object-fit:cover}
+    .abox{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:var(--r-lg);padding:var(--sp5);margin-top:var(--sp6)}
+    .abox p{font-size:var(--tx-sm);color:var(--text-muted);max-width:none;line-height:1.6}
+    .asvcs{margin-top:var(--sp6);display:flex;flex-direction:column;gap:var(--sp3)}
+    .asvc{display:flex;align-items:flex-start;gap:var(--sp3);font-size:var(--tx-base);color:var(--text-muted)}
+    .asvc i{color:var(--primary);flex-shrink:0;margin-top:2px}
+    @media(max-width:768px){.about-g{grid-template-columns:1fr}.about-img img{height:280px}}
+    .apply-sec{background:var(--surface)}
+    .apply-w{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp12);align-items:start}
+    .areq{display:flex;flex-direction:column;gap:var(--sp3)}
+    .areqi{display:flex;align-items:flex-start;gap:var(--sp3);font-size:var(--tx-base);color:var(--text-muted)}
+    .areqi i{color:var(--primary);flex-shrink:0;margin-top:3px}
+    .aform{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-2xl);padding:var(--sp8)}
+    .aform-t{font-size:var(--tx-lg);font-weight:800;margin-bottom:var(--sp6)}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp4)}
+    .fsuc{display:none;text-align:center;padding:var(--sp8);background:var(--primary-l);border-radius:var(--r-xl);border:2px solid var(--primary)}
+    .fsuc.show{display:block}
+    .fsuc h3{color:var(--primary);margin-bottom:var(--sp3)}
+    .fsuc p{color:var(--text-muted);max-width:none}
+    @media(max-width:900px){.apply-w{grid-template-columns:1fr}}
+    @media(max-width:500px){.frow{grid-template-columns:1fr}}
+    .usda-sec{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:var(--sp8)}
+    .usda-in{display:flex;flex-direction:column;gap:var(--sp4)}
+    .usda-lbl{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-faint)}
+    .usda-txt{font-size:var(--tx-xs);color:var(--text-faint);line-height:1.7;max-width:110ch}
+    .usda-txt a{color:var(--primary);text-decoration:underline}
+    footer.foot{background:var(--text);color:var(--text-inv);padding-block:var(--sp12) var(--sp8)}
+    .fg-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--sp8);margin-bottom:var(--sp10)}
+    .flogo{height:48px;width:auto;filter:brightness(0) invert(1);margin-bottom:var(--sp4)}
+    .ftag{font-size:var(--tx-sm);color:rgba(255,255,255,.6);line-height:1.6;max-width:32ch;margin-bottom:var(--sp5)}
+    .fcon a{display:flex;align-items:center;gap:var(--sp2);font-size:var(--tx-sm);color:rgba(255,255,255,.7);margin-bottom:var(--sp2);transition:color var(--tr)}
+    .fcon a:hover{color:var(--accent)}
+    .fct{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:var(--sp4)}
+    .flinks{display:flex;flex-direction:column;gap:var(--sp2)}
+    .flinks a{font-size:var(--tx-sm);color:rgba(255,255,255,.65);transition:color var(--tr)}
+    .flinks a:hover{color:var(--accent)}
+    .fbot{border-top:1px solid rgba(255,255,255,.1);padding-top:var(--sp6);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp4)}
+    .fbot-l{font-size:var(--tx-xs);color:rgba(255,255,255,.4);max-width:none}
+    .fbot-r{display:flex;gap:var(--sp5)}
+    .fbot-r a{font-size:var(--tx-xs);color:rgba(255,255,255,.4);transition:color var(--tr)}
+    .fbot-r a:hover{color:rgba(255,255,255,.8)}
+    @media(max-width:900px){.fg-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.fg-grid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.fbot-r{justify-content:center}}
+    .page{display:none}
+    .page.active{display:block}
+    .priv-hero{background:var(--primary);color:#fff;padding:var(--sp16) var(--sp6) var(--sp12)}
+    .priv-hero h1{font-size:var(--tx-2xl);color:#fff;margin-bottom:var(--sp3)}
+    .priv-hero p{color:rgba(255,255,255,.75);font-size:var(--tx-base);max-width:none}
+    .priv-con{padding-block:var(--sp12)}
+    .priv-con h2{font-size:var(--tx-xl);margin-bottom:var(--sp4);margin-top:var(--sp8);color:var(--text)}
+    .priv-con p,.priv-con li{font-size:var(--tx-base);color:var(--text-muted);margin-bottom:var(--sp4);line-height:1.7}
+    .priv-con ul{padding-left:var(--sp5)}
+    .priv-con ul li{list-style:disc}
+    .priv-con a{color:var(--primary);text-decoration:underline}
+    .fin{opacity:1}
+    @supports(animation-timeline:scroll()){
+      .fin{opacity:0;animation:rfade linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+      @keyframes rfade{to{opacity:1}}
+    }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="cookie">
+  <p>This site uses cookies and Google Analytics to understand visitor behavior. No personally identifiable information is collected. <a href="#" onclick="showPage('privacy');return false;">Privacy Policy</a></p>
+  <div class="ca"><button class="cacc" onclick="acceptC()">Accept</button><button class="cdec" onclick="declineC()">Decline</button></div>
+</div>
+<header>
+<nav class="topnav">
+  <div class="container nav-in">
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;" aria-label="Meals and More Support Home">
+      <img src="./MMS-Logo-2.jpg" alt="Meals and More Support" height="52" onerror="this.style.display='none'" />
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#" class="nav-link" onclick="showPage('home');return false;">Home</a>
+      <a href="#" class="nav-link" onclick="goSec('how-it-works');return false;">How It Works</a>
+      <a href="#" class="nav-link" onclick="goSec('estimator');return false;">Calculator</a>
+      <a href="#" class="nav-link" onclick="goSec('about');return false;">About</a>
+      <a href="#" class="nav-link" onclick="showPage('privacy');return false;">Privacy</a>
+    </nav>
+    <div class="nav-act">
+      <button class="tgl" id="thmbtn" data-theme-toggle aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+      <a href="#" class="btn btn-p" onclick="goSec('apply');return false;">Apply Now</a>
+      <button class="ham" id="hambtn" aria-label="Open menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mmenu" id="mmenu">
+    <a href="#" class="nav-link" onclick="closeMenu();showPage('home');return false;">Home</a>
+    <a href="#" class="nav-link" onclick="closeMenu();goSec('how-it-works');return false;">How It Works</a>
+    <a href="#" class="nav-link" onclick="closeMenu();goSec('estimator');return false;">Calculator / Calculadora</a>
+    <a href="#" class="nav-link" onclick="closeMenu();goSec('about');return false;">About / Nosotros</a>
+    <a href="#" class="btn btn-p" onclick="closeMenu();goSec('apply');return false;">Apply Now / Aplicar</a>
+  </div>
+</nav>
+</header>
+<main id="main">
+<div id="page-home" class="page active">
+  <section class="hero" aria-label="Hero section">
+    <div class="hbg" role="presentation"></div>
+    <div class="hov"></div>
+    <div class="hcon">
+      <div>
+        <div class="hey"><i data-lucide="shield-check" style="width:14px;height:14px;"></i> USDA CACFP Approved Sponsor &bull; Texas</div>
+        <h1 class="htitle">Feed <span class="hl">More</span>.<br>Receive <span class="hl">More</span>.<br>Stress <span class="hl">Less</span>.</h1>
+        <p class="hsub">Meals &amp; More Support helps Texas licensed child care centers earn monthly CACFP meal reimbursements while serving children the nutritious meals they deserve &mdash; with expert guidance every step of the way.</p>
+        <div class="hctas">
+          <a href="#" class="btn btn-g" onclick="goSec('apply');return false;"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Apply for Free</a>
+          <a href="#" class="btn btn-o" style="border-color:rgba(255,255,255,.5);color:#fff;" onclick="goSec('estimator');return false;"><i data-lucide="calculator" style="width:16px;height:16px;"></i> Estimate My Reimbursement</a>
+        </div>
+      </div>
+      <div class="hcard">
+        <p class="hcard-t">What Texas Licensed Centers Receives</p>
+        <div class="hsg">
+          <div class="hstat"><span class="hsn">$0</span><span class="hsl">Cost to enroll</span></div>
+          <div class="hstat"><span class="hsn">Monthly</span><span class="hsl">Reimbursements</span></div>
+          <div class="hstat"><span class="hsn">USDA</span><span class="hsl">Federal program</span></div>
+          <div class="hstat"><span class="hsn">TDA</span><span class="hsl">TX administered</span></div>
+        </div>
+        <div class="hcc">
+          <p>We handle monitoring, paperwork, and compliance &mdash; you focus on your children.</p>
+          <a href="#" class="btn btn-g" style="width:100%;justify-content:center;" onclick="goSec('estimator');return false;">See My Estimate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="trust" aria-label="Trust indicators">
+    <div class="container trust-in">
+      <div class="titem"><i data-lucide="award" style="width:18px;height:18px;"></i> Backed by a Network of CACFP Experts</div>
+      <div class="tdiv"></div>
+      <div class="titem"><i data-lucide="building-2" style="width:18px;height:18px;"></i> Licensed Child Care Centers Only</div>
+      <div class="tdiv"></div>
+      <div class="titem"><i data-lucide="map-pin" style="width:18px;height:18px;"></i> Texas</div>
+      <div class="tdiv"></div>
+      <div class="titem"><i data-lucide="shield" style="width:18px;height:18px;"></i> USDA-Compliant Program</div>
+      <div class="tdiv"></div>
+      <div class="titem"><i data-lucide="dollar-sign" style="width:18px;height:18px;"></i> No Cost to Enroll</div>
+    </div>
+  </div>
+  <section class="section cacfp-sec fin" aria-labelledby="ch">
+    <div class="container cacfp-g">
+      <div class="cacfp-img"><img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/d49a6787-88f2-4d65-9f50-a9bd113f538c.png" alt="Children eating a nutritious meal at a licensed child care center" width="600" height="380" loading="lazy" /></div>
+      <div>
+        <span class="ctag">What is CACFP?</span>
+        <h2 id="ch" class="stitle">A Federal Program That Pays You to Feed Children Well</h2>
+        <p class="ssub">The Child and Adult Care Food Program (CACFP) is a federal nutrition program administered in Texas by the Texas Department of Agriculture. It reimburses licensed child care centers for every qualifying meal and snack served to enrolled children.</p>
+        <ul class="ccl">
+          <li class="cck"><i data-lucide="check-circle" style="width:18px;height:18px;"></i> Free to join &mdash; no cost ever to your center</li>
+          <li class="cck"><i data-lucide="check-circle" style="width:18px;height:18px;"></i> Receive reimbursements monthly from the USDA</li>
+          <li class="cck"><i data-lucide="check-circle" style="width:18px;height:18px;"></i> Serve better meals with nutrition guidance included</li>
+          <li class="cck"><i data-lucide="check-circle" style="width:18px;height:18px;"></i> We handle compliance monitoring and TDA paperwork</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section pill-sec fin" aria-labelledby="ph">
+    <div class="container">
+      <div class="pill-hd">
+        <span class="slabel">Why Choose M&Ms</span>
+        <h2 id="ph" class="stitle">We Mean <em style="color:var(--primary);font-style:normal;">More</em></h2>
+        <p class="ssub" style="margin-inline:auto;">More reimbursement. More support. More compliance confidence. More time back in your day.</p>
+      </div>
+      <div class="pill-g">
+        <div class="pill-c"><div class="pill-ic"><i data-lucide="dollar-sign" style="width:24px;height:24px;"></i></div><h3 class="pill-t">More Reimbursement</h3><p class="pill-d">We help you maximize every meal claim. Our team ensures your menus and records qualify for the highest reimbursement rates your center is eligible for under TDA guidelines.</p></div>
+        <div class="pill-c"><div class="pill-ic"><i data-lucide="users" style="width:24px;height:24px;"></i></div><h3 class="pill-t">More Support</h3><p class="pill-d">From enrollment to monitoring visits, you are never alone. Our team is your dedicated partner &mdash; answering questions, solving problems, and keeping your program on track.</p></div>
+        <div class="pill-c"><div class="pill-ic"><i data-lucide="shield-check" style="width:24px;height:24px;"></i></div><h3 class="pill-t">More Compliance Confidence</h3><p class="pill-d">CACFP rules can be complex. We are backed by a network with deep expertise so you are always prepared for TDA monitoring reviews &mdash; no surprises.</p></div>
+        <div class="pill-c"><div class="pill-ic"><i data-lucide="book-open" style="width:24px;height:24px;"></i></div><h3 class="pill-t">More Nutrition Knowledge</h3><p class="pill-d">We provide ongoing meal pattern education and resources so your staff can confidently plan and serve compliant, nutritious meals children actually enjoy eating.</p></div>
+        <div class="pill-c"><div class="pill-ic"><i data-lucide="clock" style="width:24px;height:24px;"></i></div><h3 class="pill-t">More Time For What Matters</h3><p class="pill-d">We take the administrative burden off your plate. You focus on children and families. We handle program paperwork and monitoring coordination.</p></div>
+        <div class="pill-c" style="background:var(--primary);border-color:var(--primary);"><div class="pill-ic" style="background:rgba(255,255,255,.15);color:#fff;"><i data-lucide="star" style="width:24px;height:24px;"></i></div><h3 class="pill-t" style="color:#fff;">Licensed Centers Only</h3><p class="pill-d" style="color:rgba(255,255,255,.8);">We specialize exclusively in licensed child care centers &mdash; which means deeper expertise, more focused support, and a program designed specifically for your facility type.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="how-it-works" class="section steps-sec fin" aria-labelledby="sh">
+    <div class="container">
+      <div class="steps-hd">
+        <span class="slabel">The Process</span>
+        <h2 id="sh" class="stitle">How It Works &mdash; In 4 Simple Steps</h2>
+        <p class="ssub" style="margin-inline:auto;">Getting started with CACFP through M&Ms is straightforward. We guide you through every step.</p>
+      </div>
+      <div class="steps-g">
+        <div class="step-c"><div class="step-n">1</div><h3 class="step-t">Apply Online</h3><p class="step-d">Fill out our simple contact form. We will reach out within one business day to review your center's eligibility and answer your questions.</p></div>
+        <div class="step-c"><div class="step-n">2</div><h3 class="step-t">Get Approved</h3><p class="step-d">We submit your application to TDA, obtain program approval, and handle all the enrollment paperwork. You just gather your center's documents.</p></div>
+        <div class="step-c"><div class="step-n">3</div><h3 class="step-t">Serve &amp; Record</h3><p class="step-d">Serve CACFP-compliant meals and snacks daily. We train your team on meal patterns, menu planning, and attendance records that meet TDA requirements.</p></div>
+        <div class="step-c"><div class="step-n">4</div><h3 class="step-t">Receive Payment</h3><p class="step-d">Submit your monthly meal counts through our process. We claim your reimbursements from TDA and disburse your monthly payment directly to your center.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="estimator" class="section est-sec fin" aria-labelledby="eh">
+    <div class="container est-w">
+      <div>
+        <span class="slabel">Reimbursement Calculator</span>
+        <h2 id="eh" class="stitle">How Much Could Your Center Receive?</h2>
+        <p class="ssub">Get a personalized estimate based on your center's size and operating schedule. No cost. No commitment. Just clarity on what CACFP could mean for your bottom line.</p>
+        <div class="est-why">
+          <div class="est-wi"><i data-lucide="trending-up" style="width:18px;height:18px;"></i> Based on current USDA meal reimbursement rates</div>
+          <div class="est-wi"><i data-lucide="lock" style="width:18px;height:18px;"></i> We never share your information</div>
+          <div class="est-wi"><i data-lucide="zap" style="width:18px;height:18px;"></i> Results in seconds &mdash; no account needed</div>
+        </div>
+        
+      </div>
+      <div class="est-card">
+        <h3 class="est-tit">Estimate Your Monthly Reimbursement</h3>
+        <div id="est-form">
+          <div class="fg"><label class="fl" for="ec">Average enrolled children</label><input type="number" id="ec" class="fc" placeholder="e.g. 40" min="1" max="500" /></div>
+          <div class="fg"><label class="fl" for="em">Meals served per day</label>
+            <select id="em" class="fc">
+              <option value="">-- Select --</option>
+              <option value="1">1 meal (breakfast or lunch only)</option>
+              <option value="2">2 meals (e.g. breakfast + lunch)</option>
+              <option value="3">3 meals/snacks (breakfast + lunch + snack)</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl" for="ed">Operating days per month</label><input type="number" id="ed" class="fc" placeholder="e.g. 22" min="1" max="31" value="22" /></div>
+          <div class="egate">
+            <p>Enter your email to see your personalized estimate. We will only contact you if you request more information.</p>
+            <div style="margin-bottom:var(--sp4);">
+              <iframe width="100%" height="320px" src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=0B9nViGDiE-Y12MAyO4F9a0_tKq4NI9Kn4miM1YhotFUN043QU1LSTZGRDI5M05CQlE1WVVUVk8yMC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border:none;max-width:100%;border-radius:8px;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+            </div>
+            <button class="btn btn-p" style="width:100%;justify-content:center;" onclick="calcEst()"><i data-lucide="calculator" style="width:16px;height:16px;"></i> Calculate My Estimate</button>
+          </div>
+        </div>
+        <div class="eres" id="eres">
+          <p style="font-size:var(--tx-sm);color:var(--text-muted);margin-bottom:var(--sp3);max-width:none;">Estimated monthly reimbursement range:</p>
+          <div class="eamt" id="eamt">$0 &ndash; $0</div>
+          <p class="elbl">Based on your inputs and current USDA Tier I rates</p>
+          <a href="#" class="btn btn-p" style="margin-top:var(--sp5);" onclick="goSec('apply');return false;">Apply to Start Receiving More</a>
+          <p class="edis">This is an estimate only. Actual reimbursements depend on TDA-approved rates, meal type, income eligibility of enrolled children, and attendance. Rates are updated annually by USDA. Source: USDA Food and Nutrition Service, CACFP reimbursement rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section about-sec fin" aria-labelledby="abh">
+    <div class="container about-g">
+      <div class="about-img"><img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/954b5c25-b406-44e6-8e05-42ee73b825f8.png" alt="M&Ms coordinator meeting with a licensed child care center director" width="600" height="420" loading="lazy" /></div>
+      <div>
+        <span class="slabel">About M&Ms</span>
+        <h2 id="abh" class="stitle">A Team Built Around Your Success</h2>
+        <p class="ssub">Meals &amp; More Support exists because every licensed child care center in Texas deserves access to federal food program resources &mdash; without the confusion or administrative burden that often comes with them.</p>
+        <div class="abox"><p><strong>Backed by a network of experienced CACFP professionals.</strong> Our team works in close consultation with seasoned CACFP specialists and Texas program experts, ensuring every center we sponsor benefits from decades of combined expertise and ongoing guidance.</p></div>
+        <ul class="asvcs">
+          <li class="asvc"><i data-lucide="check" style="width:18px;height:18px;"></i> CACFP enrollment and TDA application management</li>
+          <li class="asvc"><i data-lucide="check" style="width:18px;height:18px;"></i> On-site and virtual monitoring visits</li>
+          <li class="asvc"><i data-lucide="check" style="width:18px;height:18px;"></i> Meal pattern and menu planning education</li>
+          <li class="asvc"><i data-lucide="check" style="width:18px;height:18px;"></i> Monthly reimbursement claims and disbursement</li>
+          <li class="asvc"><i data-lucide="check" style="width:18px;height:18px;"></i> Nutrition mentorship and ongoing staff training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="apply" class="section apply-sec fin" aria-labelledby="aph">
+    <div class="container apply-w">
+      <div>
+        <span class="slabel">Get Started</span>
+        <h2 id="aph" class="stitle">Apply to Join CACFP &mdash; It's Free</h2>
+        <p class="ssub" style="margin-bottom:var(--sp8);">Enrollment for new sponsors is open year-round. Submit your interest form and our team will contact you within one business day to begin the process.</p>
+        <div class="areq">
+          <p style="font-size:var(--tx-sm);font-weight:700;color:var(--text);margin-bottom:var(--sp3);max-width:none;">You will generally need:</p>
+          <div class="areqi"><i data-lucide="file-check" style="width:18px;height:18px;"></i> Active Texas child care center license</div>
+          <div class="areqi"><i data-lucide="file-check" style="width:18px;height:18px;"></i> Federal tax ID (EIN)</div>
+          <div class="areqi"><i data-lucide="file-check" style="width:18px;height:18px;"></i> Current enrollment records</div>
+          <div class="areqi"><i data-lucide="file-check" style="width:18px;height:18px;"></i> Bank account for direct deposit of reimbursements</div>
+        </div>
+        <div style="margin-top:var(--sp8);padding:var(--sp5);background:var(--gold-l);border:1px solid rgba(224,144,0,.3);border-radius:var(--r-lg);">
+          <p style="font-size:var(--tx-sm);color:var(--text-muted);max-width:none;"><strong>Note on sponsor switching:</strong> Centers currently enrolled with another CACFP sponsor may transfer to M&Ms during the open enrollment window (June 1 &ndash; September 30). Contact us to discuss your options.</p>
+        </div>
+      </div>
+      <div class="aform">
+        <h3 class="aform-t">Send Us a Message</h3>
+        <div id="cform">
+          <iframe width="100%" height="700px" src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=0B9nViGDiE-Y12MAyO4F9a0_tKq4NI9Kn4miM1YhotFUQ0paVTNTMUdUTE41TkNIM0Y0RkpZWkxCQS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border:none;max-width:100%;border-radius:8px;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+          <p style="font-size:var(--tx-xs);color:var(--text-faint);text-align:center;margin-top:var(--sp4);max-width:none;">We typically respond within 1 business day. You can also email us at <a href="mailto:mealsnmores@gmail.com" style="color:var(--primary);">mealsnmores@gmail.com</a></p>
+        </div>
+                <div class="fsuc" id="fsuc">
+          <i data-lucide="check-circle" style="width:48px;height:48px;color:var(--primary);margin:0 auto var(--sp4);"></i>
+          <h3>Thank You!</h3>
+          <p>Your message has been received. A member of our team will be in touch within one business day to discuss your center's enrollment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="usda-sec">
+    <div class="container--d usda-in">
+      <span class="usda-lbl">USDA Non-Discrimination Statement</span>
+      <p class="usda-txt">In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), disability, age, or reprisal or retaliation for prior civil rights activity. Program information may be made available in languages other than English. Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the responsible state or local agency that administers the program or USDA's TARGET Center at (202) 720-2600 (voice and TTY) or contact USDA through the Federal Relay Service at (800) 877-8339. To file a program discrimination complaint, a Complainant should complete a Form AD-3027, USDA Program Discrimination Complaint Form which can be obtained online at: <a href="https://www.usda.gov/sites/default/files/documents/ad-3027.pdf" target="_blank" rel="noopener noreferrer">usda.gov/sites/default/files/documents/ad-3027.pdf</a>, from any USDA office, by calling (866) 632-9992, or by writing a letter addressed to USDA. The completed AD-3027 form or letter must be submitted to USDA by mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; fax: (833) 256-1665 or (202) 690-7442; or email: <a href="mailto:program.intake@usda.gov">program.intake@usda.gov</a>. This institution is an equal opportunity provider.</p>
+    </div>
+  </div>
+</div>
+<div id="page-privacy" class="page">
+  <div class="priv-hero"><div class="container--n"><h1>Privacy Policy</h1><p>Last updated: May 2026</p></div></div>
+  <div class="priv-con"><div class="container--n">
+    <h2>1. Who We Are</h2><p>Meals &amp; More Support (M&Ms) is a CACFP food program sponsor located in Sugar Land, Texas. For privacy questions, contact us at <a href="mailto:mealsnmores@gmail.com">mealsnmores@gmail.com</a>.</p>
+    <h2>2. Information We Collect</h2><p>We collect information in two ways:</p><ul><li><strong>Information you provide:</strong> When you fill out our contact or interest form, we collect your name, email address, phone number, child care center name, city, and any other information you voluntarily provide.</li><li><strong>Information collected automatically:</strong> We use Google Analytics 4 (GA4) to collect anonymized data about how visitors use this website, including pages visited, time on site, general geographic location (city/region level), device type, and referral source. Google Analytics does not collect personally identifiable information (PII) such as your name or email address.</li></ul>
+    <h2>3. Cookies and Google Analytics</h2><p>This website uses cookies to enable Google Analytics. A cookie is a small text file placed on your device. Google Analytics uses first-party cookies (_ga, _gid, _gat) to distinguish users and track usage patterns. No personally identifiable information is transmitted through these cookies.</p><p>You can opt out of Google Analytics tracking by: declining cookies in our cookie notice when you first visit the site; installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>; or adjusting your browser's cookie settings to block all cookies.</p><p>Google's privacy practices are governed by Google's Privacy Policy, available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+    <h2>4. How We Use Your Information</h2><ul><li>To respond to your inquiry about CACFP enrollment</li><li>To communicate program information relevant to your child care center</li><li>To improve this website using aggregated, anonymized analytics data</li></ul>
+    <h2>5. How We Share Your Information</h2><p>We do not sell, rent, or share your personal information with third parties for marketing purposes. We may share information with the Texas Department of Agriculture (TDA) as required to process your CACFP enrollment application, and with Google LLC for anonymized analytics data only.</p>
+    <h2>6. Data Retention</h2><p>Contact form submissions are retained for the duration of our business relationship and up to 3 years afterward for program compliance purposes. Analytics data is retained in Google Analytics per Google's standard retention settings (up to 14 months by default).</p>
+    <h2>7. Your Rights</h2><p>You may request access to, correction of, or deletion of personal information we hold about you by contacting us at <a href="mailto:mealsnmores@gmail.com">mealsnmores@gmail.com</a>. We will respond within a reasonable time.</p>
+    <h2>8. Security</h2><p>We take reasonable measures to protect your information. However, no internet transmission is 100% secure. Please do not send sensitive financial information through our contact form.</p>
+    <h2>9. Children's Privacy</h2><p>This website is directed at child care center operators and administrators, not children. We do not knowingly collect personal information from individuals under 13 years of age.</p>
+    <h2>10. Changes to This Policy</h2><p>We may update this Privacy Policy periodically. The updated date at the top of this page reflects the most recent revision.</p>
+    <h2>11. Contact Us</h2><p>Meals &amp; More Support &bull; Sugar Land, Texas &bull; <a href="mailto:mealsnmores@gmail.com">mealsnmores@gmail.com</a></p>
+    <div style="margin-top:var(--sp8);"><a href="#" class="btn btn-o" onclick="showPage('home');return false;"><i data-lucide="arrow-left" style="width:16px;height:16px;"></i> Back to Home</a></div>
+  </div></div>
+</div>
+</main>
+<footer class="foot">
+  <div class="container">
+    <div class="fg-grid">
+      <div>
+        <img src="./MMS-Logo-2.jpg" alt="Meals and More Support" class="flogo" height="48" onerror="this.style.display='none'" />
+        <p class="ftag">Helping Texas licensed child care centers feed children well and earn more through CACFP.</p>
+        <div class="fcon">
+          <a href="mailto:mealsnmores@gmail.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> mealsnmores@gmail.com</a>
+          <a href="#"><i data-lucide="map-pin" style="width:14px;height:14px;"></i> Sugar Land, Texas</a>
+        </div>
+      </div>
+      <div><p class="fct">Program</p><ul class="flinks"><li><a href="#" onclick="showPage('home');return false;">Home</a></li><li><a href="#" onclick="goSec('how-it-works');return false;">How It Works</a></li><li><a href="#" onclick="goSec('estimator');return false;">Calculator</a></li><li><a href="#" onclick="goSec('apply');return false;">Apply Now</a></li></ul></div>
+      <div><p class="fct">Organization</p><ul class="flinks"><li><a href="#" onclick="goSec('about');return false;">About M&Ms</a></li><li><a href="mailto:mealsnmores@gmail.com">Contact Us</a></li><li><a href="#" onclick="showPage('privacy');return false;">Privacy Policy</a></li></ul></div>
+      <div><p class="fct">Resources</p><ul class="flinks"><li><a href="https://www.squaremeals.org" target="_blank" rel="noopener noreferrer">SquareMeals (TDA)</a></li><li><a href="https://www.fns.usda.gov/cacfp" target="_blank" rel="noopener noreferrer">USDA CACFP</a></li><li><a href="https://www.usda.gov/sites/default/files/documents/ad-3027.pdf" target="_blank" rel="noopener noreferrer">File a Complaint (AD-3027)</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <p class="fbot-l">&copy; 2026 Meals &amp; More Support. All rights reserved. Sugar Land, Texas.<br>This institution is an equal opportunity provider. | USDA CACFP Sponsor | Administered by the Texas Department of Agriculture.</p>
+      <div class="fbot-r"><a href="#" onclick="showPage('privacy');return false;">Privacy Policy</a><a href="mailto:mealsnmores@gmail.com">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));var t=document.getElementById('page-'+id);if(t){t.classList.add('active');window.scrollTo(0,0);}if(typeof lucide!=='undefined')lucide.createIcons();}
+function goSec(id){showPage('home');setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},100);}
+(function(){var r=document.documentElement,d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';r.setAttribute('data-theme',d);var btn=document.getElementById('thmbtn');function updIcon(mode){btn.innerHTML=mode==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';}updIcon(d);if(btn)btn.addEventListener('click',function(){d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);updIcon(d);});})();
+function toggleMenu(){document.getElementById('mmenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mmenu').classList.remove('open');}
+var curLang='en';
+function toggleLang(){curLang=curLang==='en'?'es':'en';document.querySelector('.ltgl').textContent=curLang==='en'?'EN / ES':'ES / EN';}
+function acceptC(){document.getElementById('cookie').style.display='none';}
+function declineC(){document.getElementById('cookie').style.display='none';window['ga-disable-GA_MEASUREMENT_ID']=true;}
+var RATES={b:{lo:.46,hi:1.66},l:{lo:.84,hi:3.12},s:{lo:.12,hi:.97}};
+function calcEst(){
+  var c=parseInt(document.getElementById('ec').value)||0;
+  var m=document.getElementById('em').value;
+  if(!c||!m){alert('Please fill in the number of children and meals served per day.');return;}
+  if(!e.match(/^[^@]+@[^@]+\.[^@]+$/)){alert('Please enter a valid email address.');return;}
+  var meals=parseInt(m),lo=0,hi=0;
+  if(meals>=1){lo+=RATES.b.lo;hi+=RATES.b.hi;}
+  if(meals>=2){lo+=RATES.l.lo;hi+=RATES.l.hi;}
+  if(meals>=3){lo+=RATES.s.lo;hi+=RATES.s.hi;}
+  var low=Math.round(c*lo*d),high=Math.round(c*hi*d);
+  document.getElementById('eamt').textContent='$'+low.toLocaleString()+' \u2013 $'+high.toLocaleString();
+  var r=document.getElementById('eres');r.classList.add('show');r.scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(typeof gtag!=='undefined')gtag('event','calculator_complete',{children:c,meals:meals,est_low:low,est_high:high});
+}
+/* Contact form handled by Microsoft Forms embed. */
+document.addEventListener('DOMContentLoaded',function(){if(typeof lucide!=='undefined')lucide.createIcons();});
+window.addEventListener('load',function(){if(typeof lucide!=='undefined')lucide.createIcons();});
+</script>
+</body>
+</html>
