@@ -690,5 +690,34 @@ function declineC(){document.getElementById('cookie').style.display='none';windo
 document.addEventListener('DOMContentLoaded',function(){if(typeof lucide!=='undefined')lucide.createIcons();});
 window.addEventListener('load',function(){if(typeof lucide!=='undefined')lucide.createIcons();});
 </script>
+<script>
+(function () {
+  function openLinkedSection() {
+    var id = window.location.hash.slice(1);
+
+    if (
+      id !== 'privacy-policy' &&
+      id !== 'donation-terms' &&
+      id !== 'donor-support'
+    ) return;
+
+    var target = document.getElementById(id);
+    if (!target) return;
+
+    showPage(id === 'privacy-policy' ? 'privacy' : 'home');
+
+    if (target.tagName === 'DETAILS') {
+      target.open = true;
+    }
+
+    window.requestAnimationFrame(function () {
+      target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', openLinkedSection);
+  window.addEventListener('hashchange', openLinkedSection);
+})();
+</script>  
 </body>
 </html>
