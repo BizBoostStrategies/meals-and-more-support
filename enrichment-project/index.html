@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google Analytics GA4 (same property as the MMS homepage) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL2YP14LLD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HL2YP14LLD');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Early Learning Enrichment Project | Meals &amp; More Support</title>
+  <meta name="description" content="Free daily learning activities for licensed child care centers, provided at no charge while project funding is available. A program of Meals &amp; More Support." />
+  <link rel="canonical" href="https://www.mealsandmoresupport.org/enrichment-project/" />
+  <link rel="icon" type="image/svg+xml" href="/enrichment-project/assets/elep-icon-color.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/enrichment-project/assets/elep-icon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/enrichment-project/assets/elep-icon-180x180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---- MMS design tokens (copied from the live homepage) ---- */
+    :root,[data-theme="light"]{
+      --bg:#f9f8f4;--surface:#fff;--surface2:#f4f7f4;--surface-off:#eef4ee;
+      --divider:#dde8dd;--border:#ccdacc;
+      --text:#1a2e1a;--text-muted:#4a6349;--text-faint:#8aaa89;--text-inv:#f9f8f4;
+      --primary:#1e6b3a;--primary-h:#155129;--primary-l:#e8f4ec;
+      --gold:#e09000;--gold-h:#c07a00;--gold-l:#fff8e6;--accent:#f4a900;
+      /* ELEP brand additions (from ELEP Brand Kit START-HERE.txt) */
+      --elep-green:#1E6B3A;--elep-gold:#F4A900;--elep-teal:#009C9F;
+      --teal-text:#007377;--teal-l:#e6f5f5;
+      --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-2xl:1.5rem;--r-full:9999px;
+      --sh-sm:0 1px 3px rgba(20,60,20,.08);--sh-md:0 4px 16px rgba(20,60,20,.10);--sh-lg:0 12px 40px rgba(20,60,20,.14);
+      --fd:'Nunito','Segoe UI',sans-serif;--fb:'Source Sans 3','Segoe UI',sans-serif;
+      --tx-xs:clamp(.75rem,.7rem + .25vw,.875rem);--tx-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --tx-base:clamp(1rem,.95rem + .25vw,1.125rem);--tx-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --tx-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--tx-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+      --sp1:.25rem;--sp2:.5rem;--sp3:.75rem;--sp4:1rem;--sp5:1.25rem;--sp6:1.5rem;
+      --sp8:2rem;--sp10:2.5rem;--sp12:3rem;--sp16:4rem;--sp20:5rem;--sp24:6rem;
+      --cw:1200px;--cd:960px;--cn:640px;--tr:200ms cubic-bezier(.16,1,.3,1);
+    }
+    [data-theme="dark"]{
+      --bg:#111c11;--surface:#162016;--surface2:#1c2a1c;--surface-off:#1f2f1f;
+      --divider:#2a3d2a;--border:#324832;
+      --text:#dceadc;--text-muted:#a9c2a8;--text-faint:#6f8f6e;--text-inv:#111c11;
+      --primary:#5abf7a;--primary-h:#3da862;--primary-l:#1a3520;
+      --gold:#f4b83a;--gold-h:#d99f20;--gold-l:#2a2010;--accent:#f4b83a;
+      --teal-text:#4fd1d3;--teal-l:#12302f;
+      --sh-sm:0 1px 3px rgba(0,0,0,.3);--sh-md:0 4px 16px rgba(0,0,0,.4);--sh-lg:0 12px 40px rgba(0,0,0,.5);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--fb);font-size:var(--tx-base);color:var(--text);background:var(--bg);line-height:1.65;min-height:100dvh;overflow-x:hidden}
+    img,picture{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
+    h1,h2,h3,h4{font-family:var(--fd);text-wrap:balance;line-height:1.15}
+    p,li{text-wrap:pretty;max-width:72ch}
+    :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:var(--r-sm)}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+    .container{max-width:var(--cw);margin-inline:auto;padding-inline:var(--sp6)}
+    .container--d{max-width:var(--cd);margin-inline:auto;padding-inline:var(--sp6)}
+    @media(max-width:480px){.container,.container--d{padding-inline:var(--sp4)}}
+    .section{padding-block:clamp(var(--sp12),7vw,var(--sp20))}
+    .slabel{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--primary);margin-bottom:var(--sp3);display:block}
+    .stitle{font-size:var(--tx-xl);font-weight:800;color:var(--text);margin-bottom:var(--sp5)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp2);padding:var(--sp3) var(--sp6);border-radius:var(--r-full);font-size:var(--tx-sm);font-weight:700;font-family:var(--fd);transition:all var(--tr);text-decoration:none;min-height:44px;text-align:center;line-height:1.3}
+    .btn-p{background:var(--primary);color:var(--text-inv)}
+    .btn-p:hover{background:var(--primary-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+    .btn-g{background:var(--accent);color:#1a1a00}
+    .btn-g:hover{background:var(--gold-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+    .btn-o{border:2px solid var(--primary);color:var(--primary);background:transparent}
+    .btn-o:hover{background:var(--primary-l)}
+    .btn-lg{padding:var(--sp4) var(--sp8);font-size:var(--tx-base)}
+    .btn svg{flex-shrink:0}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .skip-link{position:fixed;top:var(--sp4);left:var(--sp4);background:var(--primary);color:var(--text-inv);padding:var(--sp2) var(--sp4);border-radius:var(--r-md);z-index:9999;transform:translateY(-150%);transition:transform var(--tr)}
+    .skip-link:focus{transform:translateY(0)}
+    /* Cookie notice (same text as homepage) */
+    #cookie{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:var(--sp4) var(--sp6);z-index:9000;display:flex;align-items:center;gap:var(--sp4);flex-wrap:wrap;box-shadow:var(--sh-lg)}
+    #cookie p{font-size:var(--tx-sm);color:var(--text-muted);max-width:70ch;flex:1}
+    #cookie a{color:var(--primary);text-decoration:underline}
+    .ca{display:flex;gap:var(--sp3)}
+    .cacc{background:var(--primary);color:var(--text-inv);border-radius:var(--r-full);padding:var(--sp2) var(--sp5);font-size:var(--tx-sm);font-weight:600;cursor:pointer;border:none;min-height:40px}
+    .cdec{color:var(--text-muted);font-size:var(--tx-sm);cursor:pointer;background:none;border:none;min-height:40px;padding-inline:var(--sp3)}
+    /* MMS top navigation (same structure as homepage) */
+    nav.topnav{position:sticky;top:0;z-index:1000;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--sh-sm)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;padding-block:var(--sp3);gap:var(--sp4)}
+    .nav-logo{display:flex;align-items:center;gap:var(--sp3);text-decoration:none;flex-shrink:0}
+    .nav-logo img{height:52px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:var(--sp1)}
+    .nav-link{font-size:var(--tx-sm);font-weight:600;color:var(--text-muted);padding:var(--sp2) var(--sp3);border-radius:var(--r-md);transition:all var(--tr)}
+    .nav-link:hover{color:var(--primary);background:var(--primary-l)}
+    .nav-link[aria-current="page"]{color:var(--primary);background:var(--primary-l)}
+    .nav-act{display:flex;align-items:center;gap:var(--sp3)}
+    .tgl{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-full);color:var(--text-muted);transition:all var(--tr)}
+    .tgl:hover{background:var(--surface-off);color:var(--text)}
+    .ham{display:none;flex-direction:column;gap:5px;padding:var(--sp2);min-width:44px;min-height:44px;align-items:center;justify-content:center}
+    .ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
+    .mmenu{display:none;flex-direction:column;background:var(--surface);border-top:1px solid var(--border);padding:var(--sp4) var(--sp6);gap:var(--sp2)}
+    .mmenu.open{display:flex}
+    .mmenu .nav-link{padding:var(--sp3) var(--sp4)}
+    .mmenu .btn{width:100%;margin-top:var(--sp2)}
+    @media(max-width:768px){.nav-links{display:none}.nav-act .btn{display:none}.ham{display:flex}}
+
+    /* ---- Enrichment Project page ---- */
+    .ep-hero{position:relative;overflow:hidden;background:
+      radial-gradient(1200px 500px at 110% -10%, rgba(0,156,159,.12), transparent 60%),
+      radial-gradient(900px 420px at -10% 110%, rgba(244,169,0,.14), transparent 60%),
+      var(--bg);border-bottom:1px solid var(--border)}
+    .ep-hero-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--sp12);align-items:center;padding-block:clamp(var(--sp8),4vw,var(--sp12)) clamp(var(--sp10),5vw,var(--sp16))}
+    .ep-logo-card{background:#fff;border-radius:var(--r-xl);padding:var(--sp4) var(--sp5);box-shadow:var(--sh-sm);border:1px solid #e3ebe3;width:min(100%,400px);margin-bottom:var(--sp5)}
+    .ep-logo-card img{width:100%;height:auto}
+    .ep-program{font-family:var(--fd);font-weight:700;font-size:var(--tx-sm);color:var(--primary);margin-bottom:var(--sp3);display:flex;align-items:center;gap:var(--sp2)}
+    .ep-program::before{content:"";width:28px;height:3px;border-radius:2px;background:var(--elep-gold)}
+    .ep-h1{font-size:clamp(2rem,1.3rem + 2.2vw,3.25rem);font-weight:800;color:var(--text);line-height:1.08;margin-bottom:var(--sp5);letter-spacing:-.01em}
+    .ep-h1 .hl{color:var(--primary)}
+    .ep-lead{font-size:var(--tx-lg);color:var(--text-muted);line-height:1.55;max-width:56ch;margin-bottom:var(--sp5)}
+    .ep-status{display:flex;align-items:flex-start;gap:var(--sp3);background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--elep-teal);border-radius:var(--r-lg);padding:var(--sp3) var(--sp5);margin-bottom:var(--sp6);max-width:60ch;box-shadow:var(--sh-sm)}
+    .ep-status-dot{flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--elep-teal);margin-top:.55em;box-shadow:0 0 0 4px rgba(0,156,159,.18)}
+    .ep-status p{font-size:var(--tx-base);color:var(--text);max-width:none}
+    .ep-status strong{font-family:var(--fd);color:var(--teal-text)}
+    .ep-ctas{display:flex;gap:var(--sp3);flex-wrap:wrap}
+    .ep-ctas .btn-lg{padding:var(--sp4) var(--sp6);font-size:var(--tx-sm)}
+    .ep-glance{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:var(--sp8);box-shadow:var(--sh-md);position:relative}
+    .ep-glance-icon{position:absolute;top:calc(-1 * var(--sp6));right:var(--sp6);width:64px;height:64px;background:#fff;border-radius:50%;border:1px solid #e3ebe3;box-shadow:var(--sh-sm);display:flex;align-items:center;justify-content:center;padding:10px}
+    .ep-glance h2{font-size:var(--tx-lg);font-weight:800;margin-bottom:var(--sp5);color:var(--text)}
+    .ep-glance ul{display:flex;flex-direction:column;gap:var(--sp4)}
+    .ep-glance li{display:flex;gap:var(--sp3);align-items:flex-start;color:var(--text-muted);font-size:var(--tx-base);line-height:1.5}
+    .ep-glance li svg{flex-shrink:0;margin-top:2px;color:var(--primary)}
+    .ep-glance li strong{color:var(--text);font-weight:600}
+    @media(max-width:900px){.ep-hero-in{grid-template-columns:1fr;gap:var(--sp10)}}
+    @media(max-width:600px){.ep-ctas{flex-direction:column}.ep-ctas .btn{width:100%}}
+
+    .ep-sec-alt{background:var(--surface)}
+    .ep-two{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp10)}
+    @media(max-width:820px){.ep-two{grid-template-columns:1fr;gap:var(--sp8)}}
+    .ep-prose p{color:var(--text-muted);margin-bottom:var(--sp4)}
+    .ep-prose p:last-child{margin-bottom:0}
+    .ep-ages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp3);margin-block:var(--sp6)}
+    .ep-age{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp4) var(--sp3);text-align:center;font-family:var(--fd);font-weight:700;color:var(--text);font-size:var(--tx-sm);border-top:3px solid var(--elep-gold)}
+    .ep-age:nth-child(2){border-top-color:var(--elep-teal)}
+    .ep-age:nth-child(3){border-top-color:var(--elep-green)}
+    .ep-age:nth-child(4){border-top-color:var(--elep-gold)}
+    @media(max-width:520px){.ep-ages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .ep-callout{background:var(--teal-l);border:1px solid rgba(0,156,159,.35);border-radius:var(--r-lg);padding:var(--sp5);margin-top:var(--sp6)}
+    .ep-callout h3{font-size:var(--tx-base);font-weight:800;color:var(--teal-text);margin-bottom:var(--sp2)}
+    .ep-callout p{color:var(--text);font-size:var(--tx-sm);max-width:none;margin:0}
+    .ep-callout p+p{margin-top:var(--sp2)}
+    .ep-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp6)}
+    .ep-card h3{font-size:var(--tx-lg);font-weight:800;margin-bottom:var(--sp3);color:var(--text)}
+    .ep-card p{color:var(--text-muted);margin-bottom:var(--sp3);max-width:none}
+    .ep-card p:last-child{margin-bottom:0}
+
+    .ep-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp5);margin-top:var(--sp8);counter-reset:step}
+    .ep-step{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp6);position:relative}
+    .ep-step-n{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#1a1a00;font-family:var(--fd);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp4)}
+    .ep-step h3{font-size:var(--tx-base);font-weight:800;margin-bottom:var(--sp2)}
+    .ep-step p{font-size:var(--tx-sm);color:var(--text-muted);max-width:none}
+    @media(max-width:820px){.ep-steps{grid-template-columns:1fr}}
+
+    .ep-terms{border-left:4px solid var(--elep-gold);background:var(--gold-l);border-radius:var(--r-lg);padding:var(--sp5) var(--sp6);margin-top:var(--sp6)}
+    .ep-terms h3{font-size:var(--tx-base);font-weight:800;margin-bottom:var(--sp2);color:var(--text)}
+    .ep-terms p{font-size:var(--tx-sm);color:var(--text);max-width:none}
+
+    /* Apply section */
+    .ep-apply{background:var(--surface2);border-block:1px solid var(--border)}
+    .ep-apply-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--sp10);align-items:start}
+    @media(max-width:960px){.ep-apply-grid{grid-template-columns:1fr;gap:var(--sp8)}}
+    .ep-fields{display:flex;flex-direction:column;gap:var(--sp2);margin-block:var(--sp5)}
+    .ep-fields li{display:flex;gap:var(--sp3);align-items:flex-start;font-size:var(--tx-sm);color:var(--text-muted)}
+    .ep-fields li svg{flex-shrink:0;margin-top:3px;color:var(--primary)}
+    .ep-fields .opt{font-style:normal;color:var(--text-muted);font-size:var(--tx-xs)}
+    .ep-note{font-size:var(--tx-sm);color:var(--text-muted);max-width:none}
+    .ep-note a,.ep-link{color:var(--primary);text-decoration:underline;text-underline-offset:2px}
+    .ep-form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);box-shadow:var(--sh-md);overflow:hidden}
+    .ep-form-head{display:flex;align-items:center;justify-content:space-between;gap:var(--sp4);flex-wrap:wrap;padding:var(--sp4) var(--sp5);border-bottom:1px solid var(--border);background:var(--surface)}
+    .ep-form-head h3{font-size:var(--tx-base);font-weight:800;color:var(--text)}
+    .ep-newtab{display:inline-flex;align-items:center;gap:var(--sp2);font-size:var(--tx-sm);font-weight:700;font-family:var(--fd);color:var(--primary);text-decoration:underline;text-underline-offset:2px;min-height:44px}
+    .ep-frame{position:relative;background:#fff}
+    .ep-frame iframe{display:block;width:100%;height:1250px;border:0}
+    @media(max-width:600px){.ep-frame iframe{height:1500px}}
+    .ep-form-foot{padding:var(--sp4) var(--sp5);border-top:1px solid var(--border);font-size:var(--tx-sm);color:var(--text-muted);background:var(--surface)}
+    .ep-form-foot p{max-width:none}
+
+    /* Donate band */
+    .ep-donate{background:var(--primary);color:#fff;position:relative;overflow:hidden}
+    [data-theme="dark"] .ep-donate{background:#0e3a1c}
+    .ep-donate::after{content:"";position:absolute;right:-80px;bottom:-80px;width:320px;height:320px;background:url('/enrichment-project/assets/elep-icon-white.svg') center/contain no-repeat;opacity:.08;pointer-events:none}
+    .ep-donate-in{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:var(--sp10);align-items:center;position:relative;z-index:1}
+    @media(max-width:820px){.ep-donate-in{grid-template-columns:1fr;gap:var(--sp6)}}
+    .ep-donate .slabel{color:var(--elep-gold)}
+    [data-theme="dark"] .ep-donate .slabel{color:#f4b83a}
+    .ep-donate h2{color:#fff;font-size:var(--tx-xl);font-weight:800;margin-bottom:var(--sp4)}
+    .ep-donate p{color:rgba(255,255,255,.9);margin-bottom:var(--sp3)}
+    .ep-donate a.inline{color:#fff;text-decoration:underline;text-underline-offset:2px}
+    .ep-donate-act{display:flex;flex-direction:column;gap:var(--sp3);align-items:stretch}
+    .ep-donate-act .btn-g{color:#1a1a00;background:#F4A900}
+    .ep-donate-act .btn-g:hover{background:#ffbd2e}
+    .ep-donate-act .btn:focus-visible{outline:3px solid #F4A900;outline-offset:4px}
+    .ep-donate-act small{font-size:var(--tx-xs);color:rgba(255,255,255,.8);text-align:center}
+
+    .ep-info ul{display:flex;flex-direction:column;gap:var(--sp3);margin-top:var(--sp4)}
+    .ep-info li{display:flex;gap:var(--sp3);align-items:flex-start;color:var(--text-muted)}
+    .ep-info li::before{content:"";flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--elep-teal);margin-top:.6em}
+    .ep-contact{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp4);margin-top:var(--sp5)}
+    @media(max-width:600px){.ep-contact{grid-template-columns:1fr}}
+    .ep-contact div{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp5)}
+    .ep-contact span{display:block;font-size:var(--tx-sm);color:var(--text-muted);margin-bottom:var(--sp2)}
+    .ep-contact a{font-family:var(--fd);font-weight:700;color:var(--primary);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+
+    /* USDA statement + footer (same as homepage) */
+    .usda-sec{background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:var(--sp8)}
+    .usda-in{display:flex;flex-direction:column;gap:var(--sp4)}
+    .usda-lbl{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted)}
+    .usda-txt{font-size:var(--tx-xs);color:var(--text-muted);line-height:1.7;max-width:110ch}
+    .usda-txt a{color:var(--primary);text-decoration:underline}
+    footer.foot{background:#1a2e1a;color:#f9f8f4;padding-block:var(--sp12) var(--sp8)}
+    .fg-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--sp8);margin-bottom:var(--sp10)}
+    .flogo{height:90px;width:auto;margin-bottom:var(--sp4);border:2px solid rgba(255,255,255,0.4);border-radius:6px}
+    .ftag{font-size:var(--tx-sm);color:rgba(255,255,255,.7);line-height:1.6;max-width:32ch;margin-bottom:var(--sp5)}
+    .fcon a,.fcon span{display:flex;align-items:center;gap:var(--sp2);font-size:var(--tx-sm);color:rgba(255,255,255,.75);margin-bottom:var(--sp2);transition:color var(--tr)}
+    .fcon a:hover{color:var(--elep-gold)}
+    .fct{font-size:var(--tx-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);margin-bottom:var(--sp4)}
+    .flinks{display:flex;flex-direction:column;gap:var(--sp2)}
+    .flinks a{font-size:var(--tx-sm);color:rgba(255,255,255,.75);transition:color var(--tr)}
+    .flinks a:hover{color:var(--elep-gold)}
+    .fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:var(--sp6);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp4)}
+    .fbot-l{font-size:var(--tx-xs);color:rgba(255,255,255,.6);max-width:none}
+    .fbot-r{display:flex;gap:var(--sp5)}
+    .fbot-r a{font-size:var(--tx-xs);color:rgba(255,255,255,.6)}
+    .fbot-r a:hover{color:#fff}
+    @media(max-width:900px){.fg-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.fg-grid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.fbot-r{justify-content:center}}
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div id="cookie">
+  <p>This site uses cookies and Google Analytics to understand visitor behavior. No personally identifiable information is collected. <a href="/#privacy-policy">Privacy Policy</a></p>
+  <div class="ca"><button type="button" class="cacc" onclick="acceptC()">Accept</button><button type="button" class="cdec" onclick="declineC()">Decline</button></div>
+</div>
+
+<header>
+<nav class="topnav" aria-label="Site">
+  <div class="container nav-in">
+    <a href="/" class="nav-logo" aria-label="Meals and More Support Home">
+      <img src="/MMS-Logo-2.jpg" alt="Meals and More Support" height="72" onerror="this.style.display='none'" />
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/#how-it-works" class="nav-link">How It Works</a>
+      <a href="/enrichment-project/" class="nav-link" aria-current="page">Enrichment Project</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#privacy-policy" class="nav-link">Privacy</a>
+    </nav>
+    <div class="nav-act">
+      <button type="button" class="tgl" id="thmbtn" aria-label="Toggle dark mode"></button>
+      <a href="/#apply" class="btn btn-p">Apply Now</a>
+      <button type="button" class="ham" id="hambtn" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mmenu" id="mmenu">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/#how-it-works" class="nav-link">How It Works</a>
+    <a href="/enrichment-project/" class="nav-link" aria-current="page">Enrichment Project</a>
+    <a href="/#about" class="nav-link">About / Nosotros</a>
+    <a href="/#apply" class="btn btn-p">Apply Now / Aplicar</a>
+  </div>
+</nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="ep-hero" aria-labelledby="ep-title">
+    <div class="container ep-hero-in">
+      <div>
+        <div class="ep-logo-card">
+          <picture>
+            <source srcset="/enrichment-project/assets/elep-horizontal-color-1200x372.webp" type="image/webp" />
+            <img src="/enrichment-project/assets/elep-horizontal-color-1200x372.png"
+                 alt="Early Learning Enrichment Project — A program of Meals &amp; More Support"
+                 width="1200" height="372" fetchpriority="high" />
+          </picture>
+        </div>
+        <p class="ep-program">A program of Meals &amp; More Support</p>
+        <h1 id="ep-title" class="ep-h1">Free daily learning activities for <span class="hl">licensed child care centers</span></h1>
+        <p class="ep-lead">The Early Learning Enrichment Project provides participating child care centers with classroom-ready learning activities at no charge, funded by private donations to Meals &amp; More Support (MMS).</p>
+        <div class="ep-status" role="status">
+          <span class="ep-status-dot" aria-hidden="true"></span>
+          <p><strong>Applications are open.</strong> Centers are enrolled in the order received as funding allows.</p>
+        </div>
+        <div class="ep-ctas">
+          <a href="#apply" class="btn btn-p btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+            Apply for Free Activities
+          </a>
+          <a href="https://donate.stripe.com/3cI8wP3zM2J9a1B0ox5Rm00" class="btn btn-g btn-lg" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            Donate to Enrichment Project<span class="sr-only"> (opens Stripe checkout in a new tab)</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="ep-glance" aria-labelledby="glance-h">
+        <div class="ep-glance-icon"><img src="/enrichment-project/assets/elep-icon-color.svg" alt="" width="44" height="44" /></div>
+        <h2 id="glance-h">At a glance</h2>
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>No charge</strong> to participating centers while project funding is available</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Weekday activities by email</strong> from our activity provider, ECAB</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Four age groups:</strong> infant, toddler, pre-K, and school-age</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Texas and other states</strong> may apply</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>No CACFP enrollment with MMS required</strong></span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- WHAT CENTERS RECEIVE -->
+  <section class="section ep-sec-alt" aria-labelledby="receive-h">
+    <div class="container--d">
+      <span class="slabel">What centers receive</span>
+      <h2 id="receive-h" class="stitle">Classroom-ready activities, every weekday</h2>
+      <div class="ep-prose">
+        <p>Activities are delivered each weekday by our activity provider, ECAB (Early Childhood Activity Booster), operated by BizBoost Strategies. They cover four age groups: infant, toddler, pre-K, and school-age.</p>
+      </div>
+      <div class="ep-ages" role="list" aria-label="Age groups">
+        <div class="ep-age" role="listitem">Infant</div>
+        <div class="ep-age" role="listitem">Toddler</div>
+        <div class="ep-age" role="listitem">Pre-K</div>
+        <div class="ep-age" role="listitem">School-age</div>
+      </div>
+      <div class="ep-two">
+        <div class="ep-card">
+          <h3>How activities arrive</h3>
+          <p>Activities arrive by email as HTML attachments. Download them and open them in a compatible web browser on a smartphone, tablet, or computer.</p>
+        </div>
+        <div class="ep-card">
+          <h3>Texas and other states</h3>
+          <p>For Texas centers, activities are designed to support Texas Rising Star quality practices.</p>
+          <p>For centers outside Texas, activities are general early-learning resources and are not aligned with any other state's rating or quality system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO CAN APPLY / HOW ENROLLMENT WORKS -->
+  <section class="section" aria-labelledby="who-h">
+    <div class="container--d">
+      <div class="ep-two">
+        <div>
+          <span class="slabel">Who can apply</span>
+          <h2 id="who-h" class="stitle">Licensed centers in Texas and beyond</h2>
+          <div class="ep-prose">
+            <p>Licensed child care centers in Texas and other states may apply. Participation does not require CACFP enrollment with MMS, and applying does not affect any center's CACFP participation or sponsor relationship.</p>
+          </div>
+        </div>
+        <div>
+          <span class="slabel">How enrollment works</span>
+          <h2 class="stitle">In the order received</h2>
+          <div class="ep-prose">
+            <p>We review complete applications in the order received. Centers with a current, verifiable child care license are enrolled as funding allows. If funding is not currently available, your center will be placed on a waitlist and contacted when space opens.</p>
+          </div>
+        </div>
+      </div>
+      <ol class="ep-steps" aria-label="Enrollment steps">
+        <li class="ep-step"><div class="ep-step-n" aria-hidden="true">1</div><h3>Apply</h3><p>Submit a complete application using the form below.</p></li>
+        <li class="ep-step"><div class="ep-step-n" aria-hidden="true">2</div><h3>License check</h3><p>Applications are reviewed in the order received. Centers need a current, verifiable child care license.</p></li>
+        <li class="ep-step"><div class="ep-step-n" aria-hidden="true">3</div><h3>Enrollment or waitlist</h3><p>Centers are enrolled as funding allows. If funding is not currently available, your center is waitlisted and contacted when space opens.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WHILE YOU PARTICIPATE -->
+  <section class="section ep-sec-alt" aria-labelledby="participate-h">
+    <div class="container--d">
+      <span class="slabel">While you participate</span>
+      <h2 id="participate-h" class="stitle">No charge while funding is available</h2>
+      <div class="ep-prose">
+        <p>Activities are provided at no charge while project funding is available. Continued delivery is not guaranteed. If funding becomes insufficient, MMS will notify participating centers by email before delivery stops. Centers may keep and continue using activities already received, under the usage terms below.</p>
+      </div>
+      <div class="ep-terms" id="usage-terms">
+        <h3>Usage terms</h3>
+        <p>Activities may be shared with teachers within your own center for classroom use or printed for use in your center. They may not be resold, republished, or distributed outside your center. Receiving activities does not transfer ownership or copyright.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section id="apply" class="section ep-apply" aria-labelledby="apply-h">
+    <div class="container ep-apply-grid">
+      <div>
+        <span class="slabel">Apply</span>
+        <h2 id="apply-h" class="stitle">Apply for free activities</h2>
+        <p class="ep-note">This application is for the Enrichment Project only. It is separate from the CACFP application on our homepage.</p>
+        <p class="ep-note" style="margin-top:var(--sp4);font-weight:600;color:var(--text);">The application asks for:</p>
+        <ul class="ep-fields">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Center name</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Center address</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>License number</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Licensed capacity</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Director's name</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Email address for activity delivery</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Center telephone</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Current Texas Rising Star status <em class="opt">(optional, for information only)</em></span></li>
+        </ul>
+        <p class="ep-note">Your information: Meals &amp; More Support collects this information to review your application and administer the Enrichment Project. If your center is enrolled, we share only what is needed for delivery with our activity provider, ECAB. See section 13 of our <a href="/#privacy-policy">Privacy Policy</a>. Questions or corrections: <a href="mailto:support@mealsandmoresupport.org">support@mealsandmoresupport.org</a>.</p>
+      </div>
+
+      <div class="ep-form-card">
+        <div class="ep-form-head">
+          <h3>Center Application</h3>
+          <a class="ep-newtab" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UiBW_J6aLkG8eUBPD4tJWahofzthheJEiGZSieyL_YpURTNVQ1Y1SFIyRlFINlhTRExOR1ZaWTVIRi4u" target="_blank" rel="noopener noreferrer">
+            Open application in a new tab
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </a>
+        </div>
+        <div class="ep-frame">
+          <iframe
+            title="Early Learning Enrichment Project center application (Microsoft Forms)"
+            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UiBW_J6aLkG8eUBPD4tJWahofzthheJEiGZSieyL_YpURTNVQ1Y1SFIyRlFINlhTRExOR1ZaWTVIRi4u&amp;embed=true"
+            loading="lazy" frameborder="0" marginwidth="0" marginheight="0"
+            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+        </div>
+        <div class="ep-form-foot">
+          <p>If the form does not load or is hard to use on your device, <a class="ep-link" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UiBW_J6aLkG8eUBPD4tJWahofzthheJEiGZSieyL_YpURTNVQ1Y1SFIyRlFINlhTRExOR1ZaWTVIRi4u" target="_blank" rel="noopener noreferrer">open the application in a new tab</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT THE PROJECT -->
+  <section class="section ep-donate" aria-labelledby="donate-h">
+    <div class="container ep-donate-in">
+      <div>
+        <span class="slabel">Support the project</span>
+        <h2 id="donate-h">Help more centers receive free activities</h2>
+        <p>The project is funded entirely by private donations, not by CACFP or USDA funds. Meals &amp; More Support is a 501(c)(3) public charity. Online gifts are one-time donations and do not purchase any benefit for the donor.</p>
+        <p><a class="inline" href="/#donation-terms">Read the donation terms for online giving</a></p>
+      </div>
+      <div class="ep-donate-act">
+        <a href="https://donate.stripe.com/3cI8wP3zM2J9a1B0ox5Rm00" class="btn btn-g btn-lg" target="_blank" rel="noopener noreferrer">Donate to Enrichment Project<span class="sr-only"> (opens Stripe checkout in a new tab)</span></a>
+        <small>Secure one-time gift through Stripe-hosted checkout</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT INFORMATION + QUESTIONS -->
+  <section class="section" aria-labelledby="info-h">
+    <div class="container--d">
+      <div class="ep-info">
+        <span class="slabel">Important information</span>
+        <h2 id="info-h" class="stitle">Before you apply</h2>
+        <ul>
+          <li>Activities are a supplemental resource and do not replace a center's core curriculum.</li>
+          <li>Activity content is developed with AI assistance. Centers should review activities for appropriateness and consult their TRS mentor or specialist as needed.</li>
+          <li>This Enrichment Project and its activities are not endorsed by TWC or the Texas Rising Star program. Participation does not guarantee certification, a rating, or an assessment outcome.</li>
+        </ul>
+      </div>
+      <div style="margin-top:var(--sp12);">
+        <span class="slabel">Questions</span>
+        <h2 class="stitle" style="font-size:var(--tx-lg);">Who to contact</h2>
+        <div class="ep-contact">
+          <div><span>Applications, enrollment, or your information</span><a href="mailto:support@mealsandmoresupport.org">support@mealsandmoresupport.org</a></div>
+          <div><span>Activity delivery</span><a href="mailto:ecabsupport@getecab.com">ecabsupport@getecab.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="usda-sec">
+    <div class="container--d usda-in">
+      <span class="usda-lbl">USDA Non-Discrimination Statement</span>
+      <p class="usda-txt">In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), disability, age, or reprisal or retaliation for prior civil rights activity. Program information may be made available in languages other than English. Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the responsible state or local agency that administers the program or USDA's TARGET Center at (202) 720-2600 (voice and TTY) or contact USDA through the Federal Relay Service at (800) 877-8339. To file a program discrimination complaint, a Complainant should complete a Form AD-3027, USDA Program Discrimination Complaint Form which can be obtained online at: <a href="https://www.usda.gov/sites/default/files/documents/ad-3027.pdf" target="_blank" rel="noopener noreferrer">usda.gov/sites/default/files/documents/ad-3027.pdf</a>, from any USDA office, by calling (866) 632-9992, or by writing a letter addressed to USDA. The completed AD-3027 form or letter must be submitted to USDA by mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; fax: (833) 256-1665 or (202) 690-7442; or email: <a href="mailto:program.intake@usda.gov">program.intake@usda.gov</a>. This institution is an equal opportunity provider.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="fg-grid">
+      <div>
+        <a href="https://info.cacfp.org/sponsor/Details/meals-more-support-3420853" target="_blank" rel="noopener noreferrer" aria-label="View Meals and More Support on National CACFP Association"><img src="/NCA-Badge-2.jpg" alt="National CACFP Association Member" class="flogo" height="90" onerror="this.style.display='none'" /></a>
+        <p class="ftag">Helping Texas licensed child care centers feed children well and earn more through CACFP.</p>
+        <div class="fcon">
+          <a href="mailto:support@mealsandmoresupport.org">support@mealsandmoresupport.org</a>
+          <span>Rosenberg, Texas</span>
+        </div>
+      </div>
+      <div><p class="fct">Program</p><ul class="flinks"><li><a href="/">Home</a></li><li><a href="/#how-it-works">How It Works</a></li><li><a href="/#apply">Apply Now</a></li><li><a href="/enrichment-project/">Enrichment Project</a></li></ul></div>
+      <div><p class="fct">Organization</p><ul class="flinks"><li><a href="/#about">About Meals &amp; More Support</a></li><li><a href="mailto:support@mealsandmoresupport.org">Contact Us</a></li><li><a href="/#privacy-policy">Privacy Policy</a></li></ul></div>
+      <div><p class="fct">Resources</p><ul class="flinks"><li><a href="https://www.squaremeals.org" target="_blank" rel="noopener noreferrer">SquareMeals (TDA)</a></li><li><a href="https://www.fns.usda.gov/cacfp" target="_blank" rel="noopener noreferrer">USDA CACFP</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <p class="fbot-l">&copy; 2026 Meals &amp; More Support. All rights reserved. Rosenberg, Texas.<br>This institution is an equal opportunity provider. | USDA CACFP Sponsor | Administered by the Texas Department of Agriculture.</p>
+      <div class="fbot-r"><a href="/#privacy-policy">Privacy Policy</a><a href="mailto:support@mealsandmoresupport.org">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var r=document.documentElement, btn=document.getElementById('thmbtn');
+  var d=window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  var sun='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  var moon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  function set(m){d=m;r.setAttribute('data-theme',m);if(btn)btn.innerHTML=m==='dark'?sun:moon;}
+  set(d);
+  if(btn)btn.addEventListener('click',function(){set(d==='dark'?'light':'dark');});
+})();
+function toggleMenu(){var m=document.getElementById('mmenu'),o=m.classList.toggle('open');document.getElementById('hambtn').setAttribute('aria-expanded',o?'true':'false');}
+function acceptC(){document.getElementById('cookie').style.display='none';}
+function declineC(){document.getElementById('cookie').style.display='none';window['ga-disable-G-HL2YP14LLD']=true;}
+</script>
+</body>
+</html>
